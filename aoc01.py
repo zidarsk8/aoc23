@@ -1,13 +1,10 @@
-
 import string
 
 with open('input/1.txt') as f:
     text = f.read().strip()
 
 
-print([(i,a) for i,a in enumerate(text.splitlines()) if not a.strip(string.ascii_letters)])
 print(sum([int(a.strip(string.ascii_letters)[0] + a.strip(string.ascii_letters)[-1]) for a in text.splitlines()]))
-
 
 
 text = text.replace("nine", "nine9nine")
